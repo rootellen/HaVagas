@@ -36,28 +36,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (((TextView) view).getText().equals("Fundamental") || ((TextView) view).getText().equals("Ensino Medio")){
-                    //Retira os outros campos
+
                     activityMainBinding.editTextAnoConclusao.setVisibility(View.GONE);
                     activityMainBinding.editTextAnoFormatura.setVisibility(View.GONE);
                     activityMainBinding.editTextMonografia.setVisibility(View.GONE);
                     activityMainBinding.editTextOrientador.setVisibility(View.GONE);
 
-                    //Ativa o campo
                     activityMainBinding.editTextAnoFormatura.setVisibility(View.VISIBLE);
                 }   else if(((TextView) view).getText().equals("Graduação") || ((TextView) view).getText().equals("Especialização")){
-                    //Retira os outros campos
+
                     activityMainBinding.editTextAnoFormatura.setVisibility(View.GONE);
                     activityMainBinding.editTextMonografia.setVisibility(View.GONE);
                     activityMainBinding.editTextOrientador.setVisibility(View.GONE);
 
-                    //Ativa o campo
                     activityMainBinding.editTextAnoConclusao.setVisibility(View.VISIBLE);
                     activityMainBinding.editTextInstituicao.setVisibility(View.VISIBLE);
                 }   else if(((TextView) view).getText().equals("Mestrado") || ((TextView) view).getText().equals("Doutorado")){
-                    //Retira os outros campos
-                    activityMainBinding.editTextAnoFormatura.setVisibility(View.GONE);
 
-                    //Ativa o campo
+                    activityMainBinding.editTextAnoFormatura.setVisibility(View.GONE);
                     activityMainBinding.editTextAnoConclusao.setVisibility(View.VISIBLE);
                     activityMainBinding.editTextInstituicao.setVisibility(View.VISIBLE);
                     activityMainBinding.editTextMonografia.setVisibility(View.VISIBLE);
